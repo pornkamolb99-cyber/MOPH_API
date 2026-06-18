@@ -154,6 +154,9 @@ class MophApiClient:
     def update_lab(self, payload: dict[str, Any]) -> ApiResult:
         return self.post_json(self.config.update_lab_url, payload)
 
+    def send_ht(self, payload):
+        return self.post_json(self.config.send_ht_url,payload,)
+
     def post_cancer_link_json(self, url: str, payload: list[dict[str, Any]]) -> ApiResult:
         config = get_cancer_link_config()
 

@@ -35,6 +35,7 @@ class MophConfig:
     send_epi_url: str
     dm_url: str
     send_dt_url: str
+    send_ht_url: str
     update_immunization_url: str
     update_lab_url: str
 
@@ -113,6 +114,7 @@ def get_moph_config() -> MophConfig:
         send_epi_url=os.getenv("MOPH_SEND_EPI_URL", "https://claim-nhso.moph.go.th/api/v1/opd/service-admissions/epi"),
         send_dm_url=os.getenv("MOPH_SEND_DM_URL", "https://claim-nhso.moph.go.th/api/v1/opd/service-admissions/dmht"),
         send_dt_url=os.getenv("MOPH_SEND_DT_URL", "https://claim-nhso.moph.go.th/api/v1/opd/service-admissions/dt"),
+        send_ht_url=os.getenv("MOPH_SEND_HT_URL", "https://claim-nhso.moph.go.th/api/v1/opd/service-admissions/dmht",),
         update_immunization_url=os.getenv("MOPH_UPDATE_IMMUNIZATION_URL", "https://cloud4.hosxp.net/api/moph/UpdateImmunization"),
         update_lab_url=os.getenv("MOPH_UPDATE_LAB_URL", "https://cvp1.moph.go.th/api/UpdateLab"),
     )
